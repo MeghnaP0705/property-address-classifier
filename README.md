@@ -52,25 +52,26 @@ jupyter notebook property_classifier.ipynb
 ```
 Run through the cells for:
 
-data loading
+- data loading
 
-preprocessing
+- preprocessing
 
-training
+- training
 
-evaluation
+- evaluation
 
 ## Results
 
 Evaluation results and visualizations are available in the results/ folder. They show metrics such as:
 
-Accuracy
+- Accuracy
 
-Confusion matrix
+- Confusion matrix
 
-Classification reports
+- Classification reports
 
 ## Model Artifacts
 
 The best trained model files are stored in best_model/. You can load and use these artifacts for inference on new address data.
+
 
