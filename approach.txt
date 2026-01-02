@@ -1,0 +1,34 @@
+PROPERTY ADDRESS CLASSIFICATION APPROACH
+
+Problem: Property address classification into 5 categories
+[flat, houseorplot, landparcel, commercial unit, others]
+
+1. DATA PREPROCESSING
+   - Text cleaning: lowercase, remove special characters
+   - Address normalization
+
+2. FEATURE EXTRACTION
+   - TF-IDF vectorization (max_features=5000, ngram_range=(1,2))
+   - Captures unigrams and bigrams
+   - Sublinear TF scaling applied
+
+3. MODELS EVALUATED
+   - Logistic Regression (baseline): Accuracy 0.8840
+   - Random Forest: Accuracy 0.8441
+   - XGBoost: Accuracy 0.9071 (best)
+
+4. HYPERPARAMETER TUNING
+   - Grid Search with 5-fold CV
+   - Best params: C=10, penalty=l2, solver=saga
+   - Final F1-macro: 0.89
+
+5. FINAL RESULTS
+   - Accuracy: 91%
+   - Macro F1: 0.90
+   - Best performing on: commercial unit, flat
+   - Challenging classes: others, landparcel
+
+6. REPRODUCIBILITY
+   - All code in property_classifier.ipynb
+   - Models saved in best_model/ folder
+   - Random seed: 42
